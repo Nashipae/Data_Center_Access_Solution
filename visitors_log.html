@@ -41,10 +41,10 @@
 <div class="container">
 <ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link " href="Main.html">Home</a>
+      <a class="nav-link" href="Main.html">Home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
       </li>
     <li class="nav-item">
       <a class="nav-link" href="add_details.html">Add details</a>
@@ -61,73 +61,68 @@
       <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Health and Safety</a>
     </li>
     <li class="nav-item">
-            <a class="nav-link" href="visitors_log.html" tabindex="-1" aria-disabled="true">Visitors Table</a>
-          </li>
+        <a class="nav-link active" href="visitors_log.html" tabindex="-1" aria-disabled="true">Visitors Table</a>
+      </li>
+
+      <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+
   </ul>
-
-  <hr>
-
+   <hr>
+   
 <div class="row">
-    <div class="column col-md-9" id="dashboard">
-        <h3>Dashboard</h3>
+    <div class="column col-md-9">
+        <h3>Visitors Table</h3>
 
-        <div class="card-deck">
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Daily Access Report</div>
-                <div class="card-body">
-                  <h5 class="card-title">Daily Access Report</h5>
-                  <p class="card-text">Click to access the daily access report here.</p>
-                </div>
-                <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-              </div>
-        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Monthly Access Report</div>
-                <div class="card-body">
-                  <h5 class="card-title">Monthly Access Report</h5>
-                  <p class="card-text">Click to access the monthly access report here.</p>
-                </div>
-                <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-              </div>
-              <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-                <div class="card-header">Rejected Access</div>
-                <div class="card-body">
-                  <h5 class="card-title">Rejected access report</h5>
-                  <p class="card-text">Click to access the rejected access report here.</p>
-                </div>
-                <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-              </div>
-            </div>
+        <div class="table-responsive">
+                <table class="table table-bordered table-dark table-sm">
+                        
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Firstname</th>
+                                    <th scope="col">Sirname</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Company</th>
+                                    <th scope="col">Time in</th>
+                                    <th scope="col">Time out</th>
+                                    <th scope="col">Works Order</th>
+                                    <th scope="col">H & S Adhered</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>123456</td>
+                                    <td>Safaricom PLC</td>
+                                    <td>12.45</td>
+                                    <td>14.00</td>
+                                    <td>CRQ123456</td>
+                                    <td>Yes</td>
 
-            <div class="card-deck">
-              <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-                <div class="card-header">Visitors per company</div>
-                <div class="card-body">
-                  <h5 class="card-title">Visitors by company</h5>
-                  <p class="card-text">Click to access the visitors by company report here.</p>
-                </div>
-                <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-              </div>
-              <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                <div class="card-header">Whole report</div>
-                <div class="card-body">
-                  <h5 class="card-title">Report of all access requests</h5>
-                  <p class="card-text">SClick to access a report of all accesses requested here.</p>
-                </div>
-                <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-              </div>
-            </div>
+                                  </tr>
+                                  <tr>
+                                        <th scope="row">2</th>
+                                        <td>Liz</td>
+                                        <td>Akinyi</td>
+                                        <td>654321</td>
+                                        <td>Safaricom PLC</td>
+                                        <td>12.45</td>
+                                        <td>14.00</td>
+                                        <td>CRQ654321</td>
+                                        <td>Yes</td>
+                                  </tr>
+                                  
+                                </tbody>
+                                <caption>List of visitors</caption>
+                              </table>
               
-            
+              </div>
+           
     </div>
     <div class="column col-md-3">
     
@@ -172,9 +167,6 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-
-
-
 
     </div>
 </div>
