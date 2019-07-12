@@ -1,0 +1,106 @@
+{{#partial "content"}}
+
+    <div class="row">
+        <div class="column col-md-9">
+            <h3>Entrant Information</h3>
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="Firstname">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputSirName">Sirname</label>
+                        <input type="text" class="form-control" id="inputSirName" placeholder="Sirname">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <!-- <div class="form-group col-md-6">
+                      <label for="inputPassword4">Password</label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div> -->
+                    <div class="form-group col-md-6">
+                        <label for="inputHealthandSafety">Health and Safety Adhered to</label>
+                        <select id="inputHealthandSafety" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputLocation">Data Center Location</label>
+                        <input type="text" class="form-control" id="inputLocation">
+                    </div>
+                    <div class="form-group col-md-6" >
+                        <label for="inputCompany">Company</label>
+                        <input type="text" class="form-control" id="inputCompany" placeholder="Safaricom PLC">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputTime">Time in</label>
+                        <input type="text" class="form-control" id="inputTime">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputReason">Reason for Visit</label>
+                        <select id="inputReason" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Cabling</option>
+                            <option>Change faulty equipment</option>
+                            <option>Preventive Maintenance</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputWorksOrder">Works Order/ CRQ No.</label>
+                        <input type="text" class="form-control" id="inputWorksOrder">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputVerifier">Verified by</label>
+                        <input type="text" class="form-control" id="inputVerifier">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Verify details
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <button type="submit" class="btn btn-success btn-lg">Approve</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <button type="submit" class="btn btn-danger btn-lg">Reject</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputComment">Comments</label>
+                        <textarea input type="textarea" rows="7" class="form-control" id="inputComment"></textarea>
+                    </div>
+
+
+                </div>
+
+            </form>
+        </div>
+
+{{/partial}}
+
+{{> layout.hbs}}
