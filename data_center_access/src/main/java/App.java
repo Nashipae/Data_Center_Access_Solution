@@ -28,20 +28,40 @@ public class App {
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
+//
+//        get("/dashboard.hbs", (req, res) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            return new ModelAndView(model, "dashboard.hbs");
+//        }, new HandlebarsTemplateEngine());
+//
+//        get("/guard-details-addition-form.hbs", (req, res) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            return new ModelAndView(model, "guard-details-addition-form.hbs");
+//        }, new HandlebarsTemplateEngine());
+//
+//        get("/visitors_table.hbs", (req, res) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            return new ModelAndView(model, "visitors_table.hbs");
+//        }, new HandlebarsTemplateEngine());
 
-        get("/dashboard.hbs", (req, res) -> {
+        get("/visitor/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "dashboard.hbs");
+            List<Engineer> engineers = engineerDao.getAll();
+            model.put("engineers", engineers);
+            return new ModelAndView(model, "engineer-add-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/guard-details-addition-form.hbs", (req, res) -> {
+        post("/engineers", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "guard-details-addition-form.hbs");
-        }, new HandlebarsTemplateEngine());
-
-        get("/visitors_table.hbs", (req, res) -> {
-            Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "visitors_table.hbs");
+            List<Engineer> engineers = engineerDao.getAll();
+//            int id = Integer.parseInt(request.queryParams("id"));
+            int emp_no = Integer.parseInt(request.queryParams("emp_no"));
+            String name = request.queryParams("eng-name");
+            Engineer newEngineer = new Engineer(name, emp_no);
+            System.out.println(name);
+            newEngineer.getEngineerDetails();
+            return new ModelAndView(model, "engineer-success.hbs");
         }, new HandlebarsTemplateEngine());
     }
 }
+/visitorsdetails
