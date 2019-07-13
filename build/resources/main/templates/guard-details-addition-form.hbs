@@ -1,0 +1,105 @@
+{{#partial "content"}}
+
+    <div class="row">
+        <div class="column col-md-9">
+            <p>Please enter information of the Data Center guest below:</p>
+            <h3>Visitor information Capture</h3>
+
+            <form action="/visitors" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" name = "firstname" class="form-control" id="inputFirstName" placeholder="Firstname">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputSirName">Surname</label>
+                        <input type="text" name = "surname"class="form-control" id="inputSirName" placeholder="Sirname">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" name= "email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputMobile">Mobile No.</label>
+                        <input type="text" name= "mobileno" class="form-control" id="inputMobile" placeholder="Email">
+                    </div>
+                    <!-- <div class="form-group col-md-6">
+                      <label for="inputPassword4">Password</label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div> -->
+                    <div class="form-group col-md-4">
+                        <label for="inputHealthandSafety" name="healthandsafety">Health and Safety Adhered to</label>
+                        <select id="inputHealthandSafety" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputLocation">Data Center Location</label>
+                        <input type="text" name="location" class="form-control" id="inputLocation">
+                    </div>
+                    <div class="form-group col-md-6" >
+                        <label for="inputCompany">Company</label>
+                        <input type="text" name="company" class="form-control" id="inputCompany" placeholder="Safaricom PLC">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputTime">Time in</label>
+                        <input type="datetime-local" name="timein" class="form-control" id="inputTime">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputReason" name="visitreason">Reason for Visit</label>
+                        <select id="inputReason" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Cabling</option>
+                            <option>Change faulty equipment</option>
+                            <option>Preventive Maintenance</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputWorksOrder">Works Order/ CRQ No.</label>
+                        <input type="text" name="crq" class="form-control" id="inputWorksOrder">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" name="verifydetails" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Verify details
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <button type="submit" name="approved" class="btn btn-success btn-lg">Approve</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <button type="submit" name="reject" class="btn btn-danger btn-lg">Reject</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputComment">Comments</label>
+                        <textarea input type="textarea" name="comments" rows="7" class="form-control" id="inputComment"></textarea>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputVerifier">Verified by</label>
+                        <input type="text" name="verifiedby" class="form-control" id="inputVerifier">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+{{/partial}}
+
+{{> layout.hbs}}
